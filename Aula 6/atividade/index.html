@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechWorld - Tecnologia</title>
+
+    <style>
+        /* Estilo geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #222;
+        }
+
+        /* Cabeçalho com FLEXBOX */
+        header {
+            background-color: #14213d;
+            color: white;
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            color: #00d4ff;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Seção principal */
+        .hero {
+            background: linear-gradient(135deg, #14213d, #2455a4);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #00d4ff;
+            color: #14213d;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: white;
+        }
+
+        /* Conteúdo com CSS GRID */
+        .conteudo {
+            padding: 50px 8%;
+        }
+
+        .conteudo h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #14213d;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .icone {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #2455a4;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #14213d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+
+        /* Duas colunas em telas médias */
+        @media (min-width: 769px) and (max-width: 1000px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TechWorld</h1>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#conteudo">Tecnologias</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Explore o Mundo da Tecnologia</h2>
+        <p>Descubra as ferramentas que estão transformando o futuro.</p>
+        <a href="#conteudo" class="botao">Saiba mais</a>
+    </section>
+
+    <main class="conteudo" id="conteudo">
+        <h2>Áreas da Tecnologia</h2>
+
+        <div class="cards">
+
+            <article class="card">
+                <div class="icone"></div>
+                <h3>Programação</h3>
+                <p>
+                    Aprenda a desenvolver sites, aplicativos
+                    e sistemas usando linguagens como HTML,
+                    CSS, JavaScript e Python.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icone"></div>
+                <h3>Inteligência Artificial</h3>
+                <p>
+                    Conheça tecnologias capazes de aprender,
+                    analisar informações e automatizar tarefas
+                    do cotidiano.
+                </p>
+            </article>
+
+            <article class="card">
+                <div class="icone"></div>
+                <h3>Cibersegurança</h3>
+                <p>
+                    Descubra como proteger dados, sistemas
+                    e redes contra ameaças e ataques
+                    digitais.
+                </p>
+            </article>
+
+        </div>
+    </main>
+
+    <footer id="contato">
+        <p>&copy; 2026 TechWorld - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
